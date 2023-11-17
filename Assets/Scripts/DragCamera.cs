@@ -15,7 +15,7 @@ public class CameraDrag: MonoBehaviour
     void Update()
     {
         ZoomCamera(Input.GetAxis("Mouse ScrollWheel"));
-        if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(2) || Input.GetMouseButtonDown(1))
         {
             // Record the current mouse position when either mouse button is pressed
             lastMousePosition = Input.mousePosition;
@@ -34,7 +34,7 @@ public class CameraDrag: MonoBehaviour
             transform.eulerAngles += new Vector3(angleX, angleY, 0);
         }
 
-        if (Input.GetMouseButton(0)) // Left mouse button
+        if (Input.GetMouseButton(2)) // Left mouse button
         {
             // Calculate the difference in mouse position
             Vector3 delta = Input.mousePosition - lastMousePosition;
